@@ -56,8 +56,12 @@ $dataDrakor = getDrakor();
             <td><?= htmlspecialchars($row['judul']) ?></td>
             <td><?= htmlspecialchars($row['genre']) ?></td>
             <td><?= $row['tahun_rilis'] ?></td>
-            <td><a href="hapus.php?id=<?= $row['id'] ?>" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a></td>
         </tr>
+        <td>
+            <a href="edit.php?id=<?= $row['id'] ?>">Edit</a> |
+            <a href="hapus.php?id=<?= $row['id'] ?>" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+        </td>
+
         <?php } ?>
     </table>
 </body>
